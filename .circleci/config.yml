@@ -14,7 +14,7 @@ jobs:
     docker:
       - image: cimg/node:21.4.0
     # executor: node/default
-    working_directory: ~/smart-home-cicd
+    app-dir: ~/smart-home-cicd
     steps:
       - checkout
       - node/install-packages:
