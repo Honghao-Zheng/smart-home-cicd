@@ -12,13 +12,13 @@ jobs:
   # Below is the definition of your job to build and test your app, you can rename and customize it as you want.
   install-and-test:
     docker:
-      - image: cimg/node:21.4.0
+      - image: cimg/base:stable
     # executor: node/default
-    app-dir: ~/smart-home-cicd
     steps:
       - checkout
-      - node/install-packages:
-          pkg-manager: npm
+      - node/install:
+          install-yarn: true
+          node-version: '16.13'
       - run:
           command: npm install
           name: Build status app   
