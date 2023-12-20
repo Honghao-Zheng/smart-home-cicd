@@ -22,7 +22,7 @@ jobs:
       - run:
           command: npm install
           name: Build status app   
-          working_directory: ~/smart-home-cicd/apps/ce-smart-home-heating
+          working_directory: ~/smart-home-cicd/apps/ce-smart-home-heatin
       - run:
           command: npm test
           name: Run status tests 
