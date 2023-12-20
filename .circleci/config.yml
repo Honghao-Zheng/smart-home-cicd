@@ -12,8 +12,8 @@ jobs:
   # Below is the definition of your job to build and test your app, you can rename and customize it as you want.
   install-and-test:
     docker:
-      image: cimg/node:21.4.0
-    executor: node/default
+      - image: cimg/node:21.4.0
+    # executor: node/default
     working_directory: ~/smart-home-cicd
     steps:
       - checkout
