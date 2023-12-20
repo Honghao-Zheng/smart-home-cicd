@@ -12,7 +12,7 @@ jobs:
   install-and-test:
    
     executor: node/default
-    working_directory: ~/smart-home-cicd
+    working_directory: ~/smart-home-cicd/apps
     steps:
       - checkout
       - node/install-packages:
