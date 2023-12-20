@@ -12,7 +12,7 @@ jobs:
   install-and-test:
    
     executor: node/default
-    working_directory: ~/smart-home-cicd/apps
+    working_directory: ~/smart-home-cicd/apps/ce-smart-home-heating
     steps:
       - checkout
       - node/install-packages:
