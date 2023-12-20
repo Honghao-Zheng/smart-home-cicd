@@ -20,11 +20,11 @@ jobs:
       - run:
           command: npm install
           name: Build status app   
-          working_directory: ~/smart-home-cicd/apps/ce-smart-home-status
+          working_directory: ~/smart-home-cicd/apps/ce-smart-home-heating
       - run:
           command: npm test
           name: Run status tests 
-          working_directory: ~/smart-home-cicd/apps/ce-smart-home-status
+          working_directory: ~/smart-home-cicd/apps/ce-smart-home-heating
 
   # build-image-and-push:
   #   working_directory: ~/ce-cicd-sample-java-web
@@ -48,7 +48,7 @@ workflows:
   demo-app-pipeline: # This is the name of the workflow, feel free to change it to better match your workflow.
     # Inside the workflow, you define the jobs you want to run.
     jobs:
-      - build-and-test
+      - install-and-test
       # - build-image-and-push:
       #     requires: 
       #       - build-and-test # Ensures that the build and test job finished before we try to push docker image
