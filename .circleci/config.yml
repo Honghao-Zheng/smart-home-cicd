@@ -11,6 +11,7 @@ jobs:
 
   # Below is the definition of your job to build and test your app, you can rename and customize it as you want.
   install-and-test:
+    working_directory: ~/smart-home-cicd
     docker:
       - image: cimg/base:stable
     # executor: node/default
@@ -22,7 +23,7 @@ jobs:
       - run:
           command: npm install
           name: Build status app   
-          working_directory: ~/smart-home-cicd/apps/ce-smart-home-heatin
+          working_directory: ~/smart-home-cicd/apps/ce-smart-home-heating
       - run:
           command: npm test
           name: Run status tests 
