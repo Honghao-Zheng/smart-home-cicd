@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: my-lights-app
-        image: smart-home:lights_5
+        image: public.ecr.aws/a5z6u3o2/smart-home:lights_5
         ports:
         - containerPort: 80
 
