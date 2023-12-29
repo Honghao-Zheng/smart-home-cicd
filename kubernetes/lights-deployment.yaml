@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lights-deployement
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lights
+  template:
+    metadata:
+      labels:
+        app: lights
+    spec:
+      containers:
+      - name: my-lights-app
+        image: honghaoz/lights
+        ports:
+        - containerPort: 80
+

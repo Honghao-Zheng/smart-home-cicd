@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: status-deployement
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: status
+  template:
+    metadata:
+      labels:
+        app: status
+    spec:
+      containers:
+      - name: my-status-app
+        image: khanrana/status:1.0
+        ports:
+        - containerPort: 3000
+        env:
+          - name: LIGHTS_SERVICE
+            value: http://lights-service.default.svc.cluster.local:9001
+            
+          - name: HEATING_SERVICE
+            value: http://heating-service.default.svc.cluster.local:9000
+            
+

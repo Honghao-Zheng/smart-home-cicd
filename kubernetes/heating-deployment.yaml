@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: heating-deployement
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: heating
+  template:
+    metadata:
+      labels:
+        app: heating
+    spec:
+      containers:
+      - name: my-heating-app
+        image: honghaoz/heating
+        ports:
+        - containerPort: 3000
